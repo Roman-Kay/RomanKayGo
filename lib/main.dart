@@ -10,9 +10,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFFFFFFF),
-      ),
       routes: {
         '/': (context) => const BottomBarScreen(),
       },
