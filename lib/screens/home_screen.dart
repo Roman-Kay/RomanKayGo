@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:romankaygo_testapp/utils/colors.dart';
+import 'package:romankaygo_testapp/utils/text_styles.dart';
 import 'package:romankaygo_testapp/widgets/choose_container.dart';
+import 'package:romankaygo_testapp/widgets/circle_with_border.dart';
 import 'package:romankaygo_testapp/widgets/custom_drop_down.dart';
-import 'package:romankaygo_testapp/widgets/decotated_container.dart';
+import 'package:romankaygo_testapp/widgets/decorated_container.dart';
 
 class ItemOfCountry {
   final String assetsImage;
@@ -233,15 +235,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             const SizedBox(width: 4),
-                            Text(
-                              itemOfCountry.name,
-                              style: const TextStyle(
-                                color: AppColors.text_2,
-                                fontFamily: 'Roboto',
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
+                            Text(itemOfCountry.name,
+                                style: AppTextStyle.medium),
                           ],
                         ),
                         const SizedBox(height: 16),
@@ -273,15 +268,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text(
-                                            itemOfNumber.number,
-                                            style: const TextStyle(
-                                              color: AppColors.text_2,
-                                              fontFamily: 'Roboto',
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
+                                          Text(itemOfNumber.number,
+                                              style: AppTextStyle.medium),
                                           Text(
                                             itemOfNumber.region,
                                             style: const TextStyle(
@@ -294,53 +282,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ],
                                       ),
                                       const Spacer(),
-                                      Container(
-                                        width: 40,
-                                        height: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(24),
-                                          border: Border.all(
-                                            width: 1,
-                                            color: AppColors.grey,
-                                          ),
-                                        ),
-                                        child: const Center(
-                                          child: Text(
-                                            'S',
-                                            style: TextStyle(
-                                              color: AppColors.text_2,
-                                              fontFamily: 'Roboto',
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
+                                      const CircleWithBorder(text: 'S'),
                                       const SizedBox(width: 8),
-                                      Container(
-                                        width: 40,
-                                        height: 40,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(24),
-                                          border: Border.all(
-                                            width: 1,
-                                            color: AppColors.grey,
-                                          ),
-                                        ),
-                                        child: const Center(
-                                          child: Text(
-                                            'V',
-                                            style: TextStyle(
-                                              color: AppColors.text_2,
-                                              fontFamily: 'Roboto',
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
+                                      const CircleWithBorder(text: 'V'),
                                     ],
                                   ),
                                 );
