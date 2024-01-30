@@ -14,4 +14,11 @@ abstract class AppTextStyle {
     fontSize: 15,
     fontWeight: FontWeight.w600,
   );
+
+  static const regular = TextStyle(
+    color: AppColors.text_2,
+    fontFamily: 'Roboto',
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
 }

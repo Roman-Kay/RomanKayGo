@@ -127,14 +127,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   SvgPicture.asset('assets/svg/menu.svg'),
                   const SizedBox(width: 8),
-                  const Text(
+                  Text(
                     '+12021234567',
-                    style: TextStyle(
-                      color: AppColors.text_2,
-                      fontFamily: 'Roboto',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: AppTextStyle.medium.copyWith(fontSize: 16),
                   ),
                   const Spacer(),
                   SvgPicture.asset('assets/svg/chart.svg'),
@@ -202,12 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const SizedBox(width: 8),
                             const Text(
                               'Show number without verification',
-                              style: TextStyle(
-                                color: AppColors.text_2,
-                                fontFamily: 'Roboto',
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
+                              style: AppTextStyle.regular,
                             ),
                           ],
                         )
@@ -235,8 +225,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             const SizedBox(width: 4),
-                            Text(itemOfCountry.name,
-                                style: AppTextStyle.medium),
+                            Text(
+                              itemOfCountry.name,
+                              style: AppTextStyle.medium,
+                            ),
                           ],
                         ),
                         const SizedBox(height: 16),
@@ -268,8 +260,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          Text(itemOfNumber.number,
-                                              style: AppTextStyle.medium),
+                                          Text(
+                                            itemOfNumber.number,
+                                            style: AppTextStyle.medium,
+                                          ),
                                           Text(
                                             itemOfNumber.region,
                                             style: const TextStyle(

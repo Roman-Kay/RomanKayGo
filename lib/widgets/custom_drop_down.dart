@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:romankaygo_testapp/utils/colors.dart';
+import 'package:romankaygo_testapp/utils/text_styles.dart';
 
 // ignore: must_be_immutable
 class CustomDropDown extends StatelessWidget {
@@ -35,12 +36,7 @@ class CustomDropDown extends StatelessWidget {
         trailingIcon: SvgPicture.asset('assets/svg/arrow_down.svg'),
         width: width,
         initialSelection: initialSelection,
-        textStyle: const TextStyle(
-          color: AppColors.text_2,
-          fontFamily: 'Roboto',
-          fontSize: 15,
-          fontWeight: FontWeight.w600,
-        ),
+        textStyle: AppTextStyle.medium.copyWith(fontSize: 15),
         inputDecorationTheme: InputDecorationTheme(
           isDense: true,
           constraints: BoxConstraints.tight(

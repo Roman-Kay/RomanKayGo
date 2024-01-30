@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:romankaygo_testapp/utils/colors.dart';
+import 'package:romankaygo_testapp/utils/text_styles.dart';
 
 class CircleWithBorder extends StatelessWidget {
   final String text;
@@ -20,12 +21,7 @@ class CircleWithBorder extends StatelessWidget {
       child: Center(
         child: Text(
           text,
-          style: const TextStyle(
-            color: AppColors.text_2,
-            fontFamily: 'Roboto',
-            fontSize: 11,
-            fontWeight: FontWeight.w600,
-          ),
+          style: AppTextStyle.medium.copyWith(fontSize: 11),
         ),
       ),
     );
